@@ -47,7 +47,7 @@ jobs:
 
   validate:
     name: "terraform validate"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout
@@ -100,7 +100,7 @@ jobs:
     needs:
       - validate
     name: "terraform plan"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout
@@ -147,7 +147,7 @@ jobs:
       - validate
       - plan
     name: "terraform show"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout
@@ -194,7 +194,7 @@ jobs:
       - show
     environment: production
     name: "terraform apply"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout
